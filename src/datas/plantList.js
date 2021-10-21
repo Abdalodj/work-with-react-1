@@ -18,6 +18,7 @@ export const plantList = [
         name: 'pothos argenté',
         category: 'classique',
         id: '3sd',
+        isSpecialOffer: true,
         light: 1,
         water: 2
     },
@@ -47,6 +48,7 @@ export const plantList = [
         category: 'extérieur',
         id: '7ie',
         isBestSale: true,
+        isSpecialOffer: true,
         light: 2,
         water: 3
     },
@@ -54,6 +56,7 @@ export const plantList = [
         name: 'aloe',
         category: 'plante grasse',
         id: '8fp',
+        isSpecialOffer: true,
         light: 2,
         water: 1
     },
