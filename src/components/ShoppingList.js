@@ -11,7 +11,9 @@ function CategoryList() {
     return (
         <ul>
             {categoryList.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                    {item}
+                </li>
             ))}
         </ul>
     );
@@ -23,7 +25,13 @@ function ShoppingList() {
             <CategoryList/>
             <ul className='lmj-plant-list'>
                 {plantList.map((plant, index) => (
-                    <li key={plant.id} className='lmj-plant-item'>{plant.name} {plant.isBestSale ? <span>🔥</span> : null}</li>
+                    <li key={plant.id} className='lmj-plant-item'>
+                        {plant.name} {plant.isBestSale ? <span>🔥</span> : null}
+                        {
+                            plant.isSpecialOffer &&
+                            <div className="lmj-sales">Solde</div>
+                        }
+                    </li>
                 ))}
             </ul>
         </div>
