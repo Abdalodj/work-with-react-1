@@ -12,9 +12,9 @@ function Cart() {
     <div className="lmj-cart">
         <h2>Pannier</h2>
         <ul>
-            <li>Monstera: {prixMonstera} £</li>
-            <li>Lierrre: {prixLierre} £</li>
-            <li>Bouquet de fleurs: {prixBouqetFleurs} £</li>
+            <li>Monstera: {prixMonstera} €</li>
+            <li>Lierrre: {prixLierre} €</li>
+            <li>Bouquet de fleurs: {prixBouqetFleurs} €</li>
         </ul>
         <Total/>
     </div>)
