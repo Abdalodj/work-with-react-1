@@ -1,3 +1,5 @@
+import {plantList} from '../datas/plantList'
+
 
 const plantLists = [
     'monstera',
@@ -7,13 +9,32 @@ const plantLists = [
     'palmier'
 ];
 
-function ShoppingList() {
+function CategoryList() {
+    const categoryList = Array.from(
+        new Set(
+            plantList.map(x => x.category)
+        )
+    );
+
     return (
         <ul>
-            {plantLists.map((plant, index) => (
-                <li key={index}>{plant}</li>
+            {categoryList.map((item) => (
+                <li key={item}>{item}</li>
             ))}
         </ul>
+    );
+}
+
+function ShoppingList() {
+    return (
+        <div>
+            <CategoryList/>
+            <ul>
+                {plantLists.map((plant, index) => (
+                    <li key={index}>{plant}</li>
+                ))}
+            </ul>
+        </div>
     )
 }
 
