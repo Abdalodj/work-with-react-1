@@ -1,4 +1,5 @@
 import {plantList} from '../datas/plantList'
+import '../styles/ShoppingList.css'
 
 function CategoryList() {
     const categoryList = Array.from(
@@ -20,9 +21,9 @@ function ShoppingList() {
     return (
         <div>
             <CategoryList/>
-            <ul>
+            <ul className='lmj-plant-list'>
                 {plantList.map((plant, index) => (
-                    <li key={plant.id}>{plant.name} {plant.isBestSale ? <span>🔥</span> : null}</li>
+                    <li key={plant.id} className='lmj-plant-item'>{plant.name} {plant.isBestSale ? <span>🔥</span> : null}</li>
                 ))}
             </ul>
         </div>
