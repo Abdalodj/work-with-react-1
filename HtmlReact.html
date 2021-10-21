@@ -15,12 +15,35 @@
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-    console.log(React);
-    const MyComponent = () => <div>Mon élément remplace le contenu précédent.</div>;
-        ReactDOM.render(
-            <MyComponent/>, 
+        console.log(React);
+    const Header = () => <div>Mon élément remplace le contenu précédent.</div>;
+    //const Description = () => (<div>Ici achetez toutes les plantes dont vous avez toujours rêvé 🌵🌱🎍</div>);
+    
+    /* function Description() {
+    const text = "Ici achetez toutes les plantes dont vous avez toujours rêvé"
+    return (<p>{ text }</p>)
+    } */
+
+    function Description() {
+        const text = "Ici achetez toutes les plantes dont vous avez toujours rêvées"
+        const emojis = "🤑🤑🤑"
+        return (<p>{ text.slice(0, 11) + emojis }</p>)
+    }
+
+
+    function Banner() {
+        return (<div>
+                <Header/>
+                <Description/>
+            </div>);
+    }
+    ReactDOM.render(<Banner/>, 
             document.getElementById("root")
         )
+    /* ReactDOM.render(<React.Fragment>
+            <Header/><Description/></React.Fragment>, 
+            document.getElementById("root")
+        ) */
     </script>
 </body>
 
