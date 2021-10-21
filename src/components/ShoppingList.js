@@ -1,5 +1,6 @@
 import {plantList} from '../datas/plantList'
 import '../styles/ShoppingList.css'
+import CareScale from "./CareScale";
 
 function CategoryList() {
     const categoryList = Array.from(
@@ -31,6 +32,8 @@ function ShoppingList() {
                             plant.isSpecialOffer &&
                             <div className="lmj-sales">Solde</div>
                         }
+                        <CareScale careType='water' scaleValue={plant.water} />
+                        <CareScale careType='light' scaleValue={plant.light} />
                     </li>
                 ))}
             </ul>
