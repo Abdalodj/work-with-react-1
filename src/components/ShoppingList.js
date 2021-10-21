@@ -1,6 +1,6 @@
 import {plantList} from '../datas/plantList'
 import '../styles/ShoppingList.css'
-import CareScale from "./CareScale";
+import {PlantItem} from "./PlantItem";
 
 function CategoryList() {
     const categoryList = Array.from(
@@ -26,16 +26,7 @@ function ShoppingList() {
             <CategoryList/>
             <ul className='lmj-plant-list'>
                 {plantList.map((plant, index) => (
-                    <li key={plant.id} className='lmj-plant-item'>
-                        {plant.isBestSale ? <span>🔥</span> : null}
-                        {plant.name}
-                        {
-                            plant.isSpecialOffer &&
-                            <div className="lmj-sales">Solde</div>
-                        }
-                        <CareScale careType='water' scaleValue={plant.water} />
-                        <CareScale careType='light' scaleValue={plant.light} />
-                    </li>
+                    <PlantItem {...plant}/>
                 ))}
             </ul>
         </div>
