@@ -7,19 +7,9 @@ function handleOnClick(scaleValue, careType) {
         "2": "modérement",
         "3": "beaucoup"
     }
-    switch (careType) {
-        case 'water':
-            alert(`Cette plante requiert ${appreciations[scaleValue.toString()]} d'eau
-            \n Ceci est un composant CareScale de type ${careType}.`);
-            break;
-        case 'light':
-            alert(`Cette plante requiert ${appreciations[scaleValue.toString()]} de lumière
-            \n Ceci est un composant CareScale de type ${careType}.`);
-            break;
-        default:
-            alert('Not Found!');
-            break;
-    }
+
+    alert(`Cette plante requiert ${appreciations[scaleValue.toString()]}  ${careType === 'light' ? 'de lumière' : "d'arrosage"}
+    \n Ceci est un composant CareScale de type ${careType}.`);
 }
 
 function CareScale({ scaleValue, careType }) {
