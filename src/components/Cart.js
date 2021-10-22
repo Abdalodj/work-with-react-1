@@ -18,6 +18,11 @@ export default function Cart() {
                 </button>
             </div>
             <h3>Total : {monsteraPrice * cart}€</h3>
+            {
+                cart > 0 && <button onClick={() => updateCart(0)}>
+                    Vider le panier
+                </button>
+            }
         </div>
     ) : (
         <button onClick={() => setIsOpen(true)}>Ouvrir le Panier</button>
