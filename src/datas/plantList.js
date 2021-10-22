@@ -1,4 +1,12 @@
 import monstera from "../assets/monstera.jpg";
+import lyrata from "../assets/lyrata.jpg";
+import basil from "../assets/basil.jpg";
+import cactus from "../assets/cactus.jpg";
+import calathea from "../assets/calathea.jpg";
+import mint from "../assets/mint.jpg";
+import olivier from "../assets/olivier.jpg";
+import pothos from "../assets/pothos.jpg";
+import succulent from "../assets/succulent.jpg";
 
 
 export const plantList = [
@@ -13,7 +21,7 @@ export const plantList = [
     },
     {
         name: 'ficus lyrata',
-        cover: monstera,
+        cover: lyrata,
         category: 'classique',
         id: '2ab',
         light: 3,
@@ -21,7 +29,7 @@ export const plantList = [
     },
     {
         name: 'pothos argenté',
-        cover: monstera,
+        cover: pothos,
         category: 'classique',
         id: '3sd',
         isSpecialOffer: true,
@@ -29,32 +37,24 @@ export const plantList = [
         water: 2
     },
     {
-        name: 'yucca',
-        cover: monstera,
+        name: 'calathea',
         category: 'classique',
         id: '4kk',
-        light: 3,
-        water: 1
+        light: 2,
+        water: 3,
+        cover: calathea
     },
     {
         name: 'olivier',
-        cover: monstera,
+        cover: olivier,
         category: 'extérieur',
         id: '5pl',
         light: 3,
         water: 1
     },
     {
-        name: 'géranium',
-        cover: monstera,
-        category: 'extérieur',
-        id: '6uo',
-        light: 2,
-        water: 2
-    },
-    {
         name: 'basilique',
-        cover: monstera,
+        cover: basil,
         category: 'extérieur',
         id: '7ie',
         isBestSale: true,
@@ -63,20 +63,29 @@ export const plantList = [
         water: 3
     },
     {
-        name: 'aloe',
-        cover: monstera,
-        category: 'plante grasse',
-        id: '8fp',
-        isSpecialOffer: true,
-        light: 2,
-        water: 1
-    },
-    {
         name: 'succulente',
-        cover: monstera,
+        cover: succulent,
         category: 'plante grasse',
         id: '9vn',
         light: 2,
         water: 1
+    },
+
+    {
+        name: 'cactus',
+        category: 'plante grasse',
+        id: '8fp',
+        light: 2,
+        water: 1,
+        cover: cactus
+    },
+
+    {
+        name: 'menthe',
+        category: 'extérieur',
+        id: '6uo',
+        light: 2,
+        water: 2,
+        cover: mint
     }
 ]
