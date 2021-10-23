@@ -11,6 +11,11 @@ export default function Cart({ cart, updateCart }) {
     useEffect(() => {
         document.title = `LMJ: ${total}€ d'achats`;
     }, [total]);
+
+    useEffect(
+        () => {localStorage.setItem('cart', JSON.stringify(cart))}
+    )
+
     return isOpen ? (
         <div className='lmj-cart'>
             <button
