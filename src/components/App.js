@@ -3,12 +3,17 @@ import logo from '../assets/logo.png'
 import Cart from './Cart';
 import ShoppingList from "./ShoppingList";
 import Footer from "./Footer";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import '../styles/Layout.css'
 
 function App() {
+
     const initialCart = JSON.parse(localStorage.getItem('cart')) ?? [];
     const [cart, updateCart] = useState(initialCart);
+
+    useEffect(
+        () => {localStorage.setItem('cart', JSON.stringify(cart))}
+    )
 
     return (
         <div>
